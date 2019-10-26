@@ -1,0 +1,22 @@
+﻿<Window x:Class="GameOfLife.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameOfLife"
+        mc:Ignorable="d"
+        Title="GameOfLife" Height="700" Width="1000" MaxHeight="700" MaxWidth="1000" ResizeMode="NoResize ">
+    <Grid>
+        <Canvas x:Name="MainCanvas">
+            <Button x:Name="Start" Content="One Step" Click="Start_Click" Canvas.Left="236" Canvas.Top="627" Width="119"/>
+            <TextBlock Canvas.Left="531" Canvas.Top="630" Text="Generation:" TextWrapping="Wrap" RenderTransformOrigin="0.264,0.065"/>
+            <TextBlock x:Name="Generation" Canvas.Left="603" Canvas.Top="630" Text="TextBox" TextWrapping="Wrap" Width="64" RenderTransformOrigin="0.375,0.782"/>
+            <Grid>
+                <Canvas x:Name="Background" Height="620" Width="980"
+                        SizeChanged="UpdateBackPattern"/>
+                <Canvas
+                x:Name="MainField" Height="620" Width="980" Canvas.Left="11" Canvas.Top="9" Margin="12,11,-12,-11"/>
+            </Grid>
+        </Canvas>
+    </Grid>
+</Window>
